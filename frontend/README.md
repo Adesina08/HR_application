@@ -9,6 +9,12 @@ npm install
 npm run dev
 ```
 
+The development server will be available at [http://localhost:5173](http://localhost:5173).
+Use the following credentials to sign in as the HR administrator:
+
+- **Email:** `hr@example.com`
+- **Password:** `password123`
+
 ## Production Build
 
 ```bash

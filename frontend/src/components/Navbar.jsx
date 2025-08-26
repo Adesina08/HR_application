@@ -20,9 +20,15 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/">Dashboard</NavLink>
-            </li>
+            {role === 'admin' ? (
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/admin">Admin Dashboard</NavLink>
+              </li>
+            ) : (
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
+              </li>
+            )}
             {role === 'admin' && (
               <>
                 <li className="nav-item">

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import AdminRoute from './components/AdminRoute'
 import Dashboard from './pages/Dashboard'
+import AdminDashboard from './pages/AdminDashboard'
 import Employees from './pages/Employees'
 import Leaves from './pages/Leaves'
 import Goals from './pages/Goals'
@@ -19,6 +20,15 @@ export default function App() {
         <div className="container py-4">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route
+              path="/admin"
+              element={
+                <AdminRoute>
+                  <AdminDashboard />
+                </AdminRoute>
+              }
+            />
             <Route
               path="/employees"
               element={
