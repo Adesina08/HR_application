@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees | HR Portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-sJQPuL85CMwA3uWu94wL1PCx4fDg12jCwZ49Y1YWUod0VyGOnrph6tj7I0icx+obF4H6kZUPUYpx0fb7uE1Llw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="static/css/styles.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">HR Portal</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="employees.html">Employees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="leaves.html">Leave Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="goals.html">Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="announcements.html">Announcements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="analytics.html">Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="logout()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container py-4">
+      <div id="alerts"></div>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Employees</h2>
+        <a class="btn btn-primary" href="employee_form.html">
+          <i class="fa-solid fa-plus"></i> Add Employee
+        </a>
+      </div>
+      <div id="employeesTableContainer">
+        <!-- Employee table will be injected here -->
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', initEmployees);
+    </script>
+  </body>
+</html>
